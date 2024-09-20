@@ -116,11 +116,11 @@ class ContractApp:
 
     # метод для построения круговой диагрыммы
     def plot_pie_chart(self, data, title):
-        labels = data.keys()
-        sizes = data.values()
+        labels = data.keys()       # названия профессий или компаний которые берутся из списка
+        sizes = data.values()      # кол-во договоров для каждой компании или профессии
 
         plt.figure(figsize=(6, 6))
-        plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
+        plt.pie(sizes, labels=labels)
         plt.title(title)
         plt.axis('equal')
         plt.show()
